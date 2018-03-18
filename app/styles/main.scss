@@ -9,6 +9,7 @@
 
 body {
   background-color: #f3eff0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .page-content {
@@ -22,7 +23,6 @@ body {
 // INTRODUCTION.HTML
 
 div.introduction-container {
-  height: 100vh;
 
   .introduction-title {
     text-align: center;
@@ -37,6 +37,51 @@ div.introduction-container {
     p {
       font-size: .7em;
     }
+  }
+
+  .service-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+
+    .service-item-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0px 25px;
+      text-align: center;
+
+
+      h3.service-item-title {
+        font-weight: 500;
+        font-size: 1em;
+      }
+
+      p.service-item-description {
+        font-size: 0.7em;
+      }
+    }
+
+    .service-item-first-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 15px 0px;
+    }
+
+    .service-item-second-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 15px 0px;
+    }
+  }
+
+  img.service-item-icon {
+    height: 75px;
   }
 }
 
