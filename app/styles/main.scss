@@ -1,6 +1,42 @@
-@import "normalize.css";
+// Dependance
+@import url(normalize.css);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
 
-body
-{
-  background-color: white;
+// Import
+@import "./navbar";
+@import "./header";
+@import "./footer";
+
+body {
+  background-color: #f3eff0;
 }
+
+.page-content {
+  margin: 10px;
+  margin: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .20);
+  background-color: white;
+  border-radius: 5px;
+}
+
+// INTRODUCTION.HTML
+
+div.introduction-container {
+  height: 100vh;
+
+  .introduction-title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    padding: 15px 0px;
+
+    h2 {
+      font-size: 1.2em;
+    }
+
+    p {
+      font-size: .7em;
+    }
+  }
+}
+

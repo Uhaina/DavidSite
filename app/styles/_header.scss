@@ -1,0 +1,43 @@
+header {
+  width: 100%;
+  height: 100vh;
+  min-height: 450px;
+  background-image: url("../images/touch/background-header-code.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 0px 0px 15px 0px rgba(#656565, .7);
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: linear-gradient(193deg, #ce4442, #ce4f42, #ce4260);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    opacity: .8;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .main-title {
+    position: relative;
+    font-size: 3.3em;
+    padding: 0px 25px;
+    margin: 0;
+    color: #fff;
+    z-index: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-shadow: 0px 0px 4px rgba(#656565, .8);
+  }
+
+}

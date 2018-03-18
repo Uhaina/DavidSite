@@ -2,10 +2,30 @@
 
 {% block body %}
 
+<div class="page-content">
+  {% include "html/includes/navbar.html" %}
   {% include "html/includes/header.html" %}
 
-  <strong>Body</strong>
+  {% include "html/includes/pages/index/introduction.html" %}
 
   {% include "html/includes/footer.html" %}
+</div>
 
 {% endblock %}
+
+{% block javascripts %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
+
+  <script type="text/javascript">
+    // ANIMATION TYPED.JS
+    var options = {
+      strings: ["Webmarketing", ">_ Admin, archi réseau", "&lt;/&gt; Développement Web"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true,
+    }
+
+    new Typed("header div.main-title span", options);
+  </script>
+{% endblock %}
+
