@@ -40,6 +40,10 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     text-shadow: 0px 0px 4px rgba(#656565, .8);
+
+    @media screen and (max-width: 700px) {
+      font-size: 2.2em;
+    }
   }
 
 }

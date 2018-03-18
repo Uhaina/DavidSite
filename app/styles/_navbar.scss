@@ -27,6 +27,11 @@ div.navbar {
     margin-right: 25px;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+
   }
 
   a {
