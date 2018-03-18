@@ -15,6 +15,7 @@
 
 {% block javascripts %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.0/rellax.min.js"></script>
 
   <script type="text/javascript">
     // ANIMATION TYPED.JS
@@ -26,6 +27,19 @@
     }
 
     new Typed("header div.main-title span", options);
+
+    new Rellax('div.navbar', {
+      speed: -1,
+    });
+
+    new Rellax('header div.title-container', {
+      speed: -0.9,
+    });
+
+    new Rellax('header', {
+      speed: -0.2,
+    });
+
   </script>
 {% endblock %}
 
