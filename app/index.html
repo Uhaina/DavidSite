@@ -17,7 +17,8 @@
 
 {% block javascripts %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.0/rellax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.0/rellax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script type="text/javascript">
     // ANIMATION TYPED.JS
@@ -30,6 +31,7 @@
 
     new Typed("header div.main-title span", options);
 
+    // RELLAX
     new Rellax('div.navbar', {
       speed: -1,
     });
@@ -41,6 +43,36 @@
     new Rellax('header', {
       speed: -0.2,
     });
+
+    // ENVOI DU MAIl
+    $("form.contact-form").on('submit', function (event) {
+
+      event.preventDefault();
+
+      var name = $('#nom').val();
+      var email = $('#email').val();
+      var sujet = $('#sujet').val();
+      var message = $('#message').val();
+
+      $.ajax({
+        url: "http://ressources.davidvelten.fr/site-david-send-mail/index.php",
+        type: "POST",
+        data: "nom=" + name + "&email=" + email + "&sujet=" + sujet + "&message=" + message,
+        complete: function (resultat, statut, erreur) {
+          validRequest();
+        }
+      });
+    });
+
+    // VIDER LES CHAMPS APRES ENVOI DU FORMULAIRE
+    function validRequest() {
+      $('#nom').val('');
+      $('#email').val('');
+      $('#message').val('');
+      $('#sujet').val('');
+      $("div.ifSendMail").addClass("open");
+    }
+
 
   </script>
 {% endblock %}
