@@ -8,6 +8,7 @@ div.navbar {
   position: absolute;
   z-index: 2;
   color: #fff;
+  box-sizing: border-box;
 
   .navbar-title {
     font-size: 1.3em;

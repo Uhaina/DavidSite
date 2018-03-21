@@ -54,14 +54,21 @@
       var sujet = $('#sujet').val();
       var message = $('#message').val();
 
-      $.ajax({
-        url: "http://ressources.davidvelten.fr/site-david-send-mail/index.php",
-        type: "POST",
-        data: "nom=" + name + "&email=" + email + "&sujet=" + sujet + "&message=" + message,
-        complete: function (resultat, statut, erreur) {
-          validRequest();
-        }
-      });
+      if (name == "" || email == "" || sujet == "" || message == "") {
+        alert('Veuillez remplir tous les champs !');
+      }
+
+      else
+      {
+        $.ajax({
+          url: "http://ressources.davidvelten.fr/site-david-send-mail/index.php",
+          type: "POST",
+          data: "nom=" + name + "&email=" + email + "&sujet=" + sujet + "&message=" + message,
+          complete: function (resultat, statut, erreur) {
+            validRequest();
+          }
+        });
+      }
     });
 
     // VIDER LES CHAMPS APRES ENVOI DU FORMULAIRE
@@ -72,7 +79,6 @@
       $('#sujet').val('');
       $("div.ifSendMail").addClass("open");
     }
-
 
   </script>
 {% endblock %}

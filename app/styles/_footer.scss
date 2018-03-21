@@ -14,6 +14,11 @@ footer {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: white;
+
+    @media screen and (max-width: 700px) {
+      font-size: 0.8em;
+    }
+
   }
 
   .rs-link{
@@ -26,6 +31,10 @@ img.footer-rs {
   margin: 0px 5px;
   opacity: 0.5;
   transition: opacity 0.3s;
+
+  @media screen and (max-width: 700px) {
+    height: 15px;
+  }
 
   &:hover {
       opacity: 1.0;

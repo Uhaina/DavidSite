@@ -10,24 +10,28 @@
 body {
   background-color: #f3eff0;
   font-family: 'Montserrat', sans-serif;
+  padding: 10px;
 }
 
 .page-content {
-  margin: 10px;
-  margin: 10px;
   box-shadow: 0 0 30px rgba(0, 0, 0, .20);
   background-color: white;
   border-radius: 5px;
+  position: relative;
 }
 
 // PRESENTATION.HTML
 
-div.presentation-container {
+section.presentation-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 25px 0px;
   text-align: center;
+
+  @media screen and (max-width: 700px) {
+    padding: 0px 0px;
+  }
 
   p.presentation-text {
     width: 50%;
@@ -59,10 +63,14 @@ img.presentation-avatar {
 
 // INTRODUCTION.HTML
 
-div.introduction-container {
+section.introduction-container {
 
   background-color: #f5f5f5;
   box-shadow: 0px 0px 15px 0px rgba(#656565, .2);
+
+  @media screen and (max-width: 700px) {
+    padding: 0px 25px;
+  }
 
   .introduction-title {
     text-align: center;
@@ -112,25 +120,16 @@ div.introduction-container {
       }
     }
 
-    .service-item-first-column {
+    .service-item-column {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 15px 0px;
-    }
+      width: 100%;
 
-    .service-item-second-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 15px 0px;
-    }
-
-    .service-item-third-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 15px 0px;
+      @media screen and (max-width: 700px) {
+        padding: 0;
+      }
     }
   }
 
@@ -141,21 +140,26 @@ div.introduction-container {
 
 // CONTACT.HTML
 
-div.contact-container {
+section.contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 50px 0px;
+  padding: 50px 20%;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 700px) {
+    padding: 50px 25px;
+  }
 
   h2 {
     margin-bottom: 35px;
   }
-
 }
 
 div.contact-form-content {
-  width: 40%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 form.contact-form {
@@ -175,6 +179,7 @@ div.input-container {
     padding: 15px;
     border-radius: 3px;
     width: 100%;
+    box-sizing: border-box;
 
     &:focus {
       border-color: #e96443;
@@ -198,6 +203,11 @@ button {
   color: #fff;
   transition: background 0.5s, box-shadow 0.5s, color 0.5s;
 
+  @media screen and (max-width: 700px) {
+    font-size: 1em;
+    width: 70%;
+  }
+
   &:hover {
    background: #fff;
    box-shadow: 0px 0px 15px 0px rgba(#656565, .1);
@@ -205,3 +215,13 @@ button {
   }
 }
 
+.ifSendMail {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  display: none;
+}
+
+.ifSendMail.open {
+  display: block;
+  color: #007DB8;
+}
