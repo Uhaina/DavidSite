@@ -199,23 +199,18 @@ button {
   border-radius: 3px;
   border: 1px solid #ddd;
   padding: 0px;
-  background: #ddd;
+  background: #fff;
   cursor: pointer;
   padding: 10px;
   width: 30%;
   align-items: center;
-  color: #fff;
+  color: #6772e5;
   transition: background 0.5s, box-shadow 0.5s, color 0.5s;
+  box-shadow: 0px 2px 15px 0px rgba(#656565, .1);
 
   @media screen and (max-width: 700px) {
     font-size: 1em;
     width: 70%;
-  }
-
-  &:hover {
-   background: #fff;
-   box-shadow: 0px 0px 15px 0px rgba(#656565, .1);
-   color: #ddd;
   }
 }
 
